@@ -4,6 +4,8 @@ value = float(input("Enter value: "))
 
 # Simple
 
+print(sum([int(x) for x in str(value) if x.isdecimal()]))
+
 sum_val = 0
 for i in str(value):
     if i.isdecimal():
@@ -46,11 +48,12 @@ print(f"{sum([((1 + 1 / x) ** x) for x in range(1, value + 1)]):.2f}")
 # Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число
 
 from random import randint
+from os import sep as s
 
 value = int(input("Enter value: "))
 lst = [randint(-value, value + 1) for _ in range(randint(10, 21))]
 print(lst)
-with open(r'd:\__Scripts\Python\_Python_seminar\homeworks\file.txt', 'r') as file:
+with open(f'homeworks{s}file.txt', 'r') as file:
     print(sum([lst[x] for x in list(map(int, file.read().split('\n')))]))
 
 # Реализуйте алгоритм перемешивания списка.
@@ -60,10 +63,8 @@ from random import randint
 lst = [randint(1, 100) for _ in range(randint(10, 21))]
 print(lst)
 for i in range(len(lst)):
-    ind = randint(0,len(lst))
-    tmp = lst[i]
-    lst[i] = lst[ind]
-    lst[ind] = tmp
+    ind = randint(0, len(lst) - 1)
+    lst[i], lst[ind] = lst[ind], lst[i]
 print(lst)
 
 # ДОП. задача на алгоритмы с реальных собеседований Даны два массива:
