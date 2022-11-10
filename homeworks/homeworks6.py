@@ -6,6 +6,7 @@ lst = [randint(1, 10) for _ in range(10)]
 print(f'Original list: {", ".join(map(str, lst))}')
 res = [x for x in set(lst) if lst.count(x) == 1]
 print(f'Result: {", ".join(map(str, res))}')
+print()
 
 
 # Дан список: ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
@@ -29,6 +30,7 @@ def my_fix(lst):
 lst = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 fix_lst = my_fix(lst)
 print(" ".join(fix_lst))
+print()
 
 
 # * (вместо задачи 2) Решить задачу 2 не создавая новый список (как говорят, in place). Эта задача намного серьёзнее, чем может сначала показаться.
@@ -43,6 +45,7 @@ def hello(lst):
 
 lst = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй', 'директор аэлита']
 hello(lst)
+print()
 
 # Создать список, содержащий цены на товары (10–20 товаров), например:
 # [57.8, 46.51, 97, ...]
@@ -54,6 +57,11 @@ hello(lst)
 
 from random import random
 
-lst = [round(random() * randint(10, 100), 2) for _ in range(10)]
-prices = [f'{int(x)} руб {int(round(x, 2) % 1 * 100):02d} коп' for x in lst]
+# lst = [round(random() * randint(10, 100), 2) for _ in range(10)]
+# prices = [f'{int(x):02d} руб {int(round(x, 2) % 1 * 100):02d} коп' for x in lst]
+prices = list(map(lambda x: f'{int(x):02d} руб {int(round(x, 2) % 1 * 100):02d} коп',
+                  [round(random() * randint(10, 100), 2) for _ in range(10)]))
 print(',\t'.join(prices))
+print(',\t'.join(sorted(prices)))
+print(',\t'.join(sorted(prices, reverse=True)))
+print(',\t'.join(sorted(prices)[-5:]))
