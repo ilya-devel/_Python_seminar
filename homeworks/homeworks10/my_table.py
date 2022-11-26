@@ -35,59 +35,59 @@ class Table:
 
 
 if __name__ == '__main__':
-    # print(f'{"*"*10} Пример 1 {"*"*10}')
-    # tab = Table(3, 5)
-    # tab.set_value(0, 1, 10)
-    # tab.set_value(1, 2, 20)
-    # tab.set_value(2, 3, 30)
-    # for i in range(tab.n_rows()):
-    #     for j in range(tab.n_cols()):
-    #         print(tab.get_value(i, j), end=' ')
-    #     print()
-    # print()
-    #
-    # tab.add_row(1)
-    #
-    # for i in range(tab.n_rows()):
-    #     for j in range(tab.n_cols()):
-    #         print(tab.get_value(i, j), end=' ')
-    #     print()
-    # print()
+    print(f'{"*"*10} Пример 1 {"*"*10}')
+    tab = Table(3, 5)
+    tab.set_value(0, 1, 10)
+    tab.set_value(1, 2, 20)
+    tab.set_value(2, 3, 30)
+    for i in range(tab.n_rows()):
+        for j in range(tab.n_cols()):
+            print(tab.get_value(i, j), end=' ')
+        print()
+    print()
 
-    # print(f'{"*" * 10} Пример 2 {"*" * 10}')
-    # tab = Table(2, 2)
-    #
-    # for i in range(tab.n_rows()):
-    #     for j in range(tab.n_cols()):
-    #         print(tab.get_value(i, j), end=' ')
-    #     print()
-    # print()
-    #
-    # tab.set_value(0, 0, 10)
-    # tab.set_value(0, 1, 20)
-    # tab.set_value(1, 0, 30)
-    # tab.set_value(1, 1, 40)
-    #
-    # for i in range(tab.n_rows()):
-    #     for j in range(tab.n_cols()):
-    #         print(tab.get_value(i, j), end=' ')
-    #     print()
-    # print()
-    #
-    # for i in range(-1, tab.n_rows() + 1):
-    #     for j in range(-1, tab.n_cols() + 1):
-    #         print(tab.get_value(i, j), end=' ')
-    #     print()
-    # print()
-    #
-    # tab.add_row(0)
-    # tab.add_col(1)
-    #
-    # for i in range(-1, tab.n_rows() + 1):
-    #     for j in range(-1, tab.n_cols() + 1):
-    #         print(tab.get_value(i, j), end=' ')
-    #     print()
-    # print()
+    tab.add_row(1)
+
+    for i in range(tab.n_rows()):
+        for j in range(tab.n_cols()):
+            print(tab.get_value(i, j), end=' ')
+        print()
+    print()
+
+    print(f'{"*" * 10} Пример 2 {"*" * 10}')
+    tab = Table(2, 2)
+
+    for i in range(tab.n_rows()):
+        for j in range(tab.n_cols()):
+            print(tab.get_value(i, j), end=' ')
+        print()
+    print()
+
+    tab.set_value(0, 0, 10)
+    tab.set_value(0, 1, 20)
+    tab.set_value(1, 0, 30)
+    tab.set_value(1, 1, 40)
+
+    for i in range(tab.n_rows()):
+        for j in range(tab.n_cols()):
+            print(tab.get_value(i, j), end=' ')
+        print()
+    print()
+
+    for i in range(-1, tab.n_rows() + 1):
+        for j in range(-1, tab.n_cols() + 1):
+            print(tab.get_value(i, j), end=' ')
+        print()
+    print()
+
+    tab.add_row(0)
+    tab.add_col(1)
+
+    for i in range(-1, tab.n_rows() + 1):
+        for j in range(-1, tab.n_cols() + 1):
+            print(tab.get_value(i, j), end=' ')
+        print()
+    print()
 
     print(f'{"*"*10} Пример 3 {"*"*10}')
     tab = Table(1, 1)
