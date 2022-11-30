@@ -17,6 +17,7 @@ print(poly(0))  # 10
 print(poly(1))  # 9
 print(poly(2))  # 8
 
+
 print()
 
 poly1 = Polynomial([0, 0, 1])
